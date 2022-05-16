@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2022 at 03:41 AM
+-- Generation Time: May 16, 2022 at 05:51 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -46,7 +46,8 @@ INSERT INTO `admin` (`id`, `employee_name`, `contact_number`, `address`, `job_ti
 (2, 'Naba', '01686963558', 'Dhaka', 'Admin', 'mhfz', '1234'),
 (3, 'Shuvo', '01686963558', 'Dhanmondi', 'Manager', 'Shv', '1234'),
 (4, 'Dihan', '01304555701', 'Dhaka', 'Senior Executive', 'Dhn', '1234'),
-(5, 'Shakawat', '01304555701', 'Natunbazar', 'Senior  Executive', 'Shk', '1234');
+(5, 'Shakawat', '01304555701', 'Natunbazar', 'Senior  Executive', 'Shk', '1234'),
+(6, '', '01', 'aa', '', 'asc', '1234');
 
 -- --------------------------------------------------------
 
@@ -69,28 +70,27 @@ CREATE TABLE `booking` (
 --
 
 CREATE TABLE `doctor` (
-  `id` int(5) NOT NULL,
-  `doctor_name` varchar(50) NOT NULL,
-  `doctor_number` varchar(12) NOT NULL,
-  `address` varchar(150) NOT NULL,
-  `category` varchar(150) NOT NULL,
-  `time` varchar(12) NOT NULL,
-  `day` varchar(12) NOT NULL,
-  `user_name` varchar(12) NOT NULL,
-  `password` varchar(12) NOT NULL
+  `id` int(11) NOT NULL,
+  `doctor_name` varchar(300) NOT NULL,
+  `doctor_number` varchar(300) NOT NULL,
+  `address` varchar(300) NOT NULL,
+  `category` varchar(300) NOT NULL,
+  `time` varchar(300) NOT NULL,
+  `day` varchar(300) NOT NULL,
+  `username` varchar(300) NOT NULL,
+  `password` varchar(300) NOT NULL,
+  `authQues` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `doctor`
 --
 
-INSERT INTO `doctor` (`id`, `doctor_name`, `doctor_number`, `address`, `category`, `time`, `day`, `user_name`, `password`) VALUES
-(1, 'Rafiur Rashid', '01XXXXXXXX', 'Niketon', 'Heart', '5pm-8pm', 'SUN,MON,WED', 'rfr', '1234'),
-(2, 'Muzahid', '01XXXXXXXX', 'Mirpur', 'Ear', '5PM-8PM', 'SAT,SUN,TUE', 'mzd', '1234'),
-(3, 'Salman Shamil', '01XXXXXXXX', 'Dhaka', 'Eye', '5pm-8pm', 'SUN,MON,WED', 'slmn', '1234'),
-(4, 'Suman Ahmed', '01XXXXXXXX', 'Dhanmondi', 'Eye', '5PM-8PM', 'SAT,SUN,TUE', 'SMN', '1234'),
-(5, 'Shibli Amin', '01XXXXXXXX', 'Dhaka', 'Heart', '8PM-10PM', 'FRI', 'shbl', '1234'),
-(6, 'Mohammed Imam Hasan', '01XXXXXXXX', 'Mugda', 'Heart', ' 10AM-12PM ', 'SUN ', 'imam ', '1234');
+INSERT INTO `doctor` (`id`, `doctor_name`, `doctor_number`, `address`, `category`, `time`, `day`, `username`, `password`, `authQues`) VALUES
+(3, 'Rafiur Rashid', '01304555701', 'Niketon', 'Eye', '8:00pm - 10;00 pm', 'Sun,Mon,Tue', 'rfr', '1234', 'blue'),
+(4, 'Salman Shamil', '01686963558', 'Rayerbag', 'Ear', '8:00pm - 10;00 pm', 'SUm,Mon,Tue', 'SHL', '1234', 'Red'),
+(5, 'A.K.M Muzahid Islam', '01686963558', 'Mirpur', 'Eye', '8:00pm - 10;00 pm', 'Sat, Wed, Tue', 'MZHD', '1234', 'Green'),
+(6, 'Suman Ahmed', '01304555701', 'Rayerbag', 'Heart', '8:00pm - 10;00 pm', 'Sat, Wed, Tue', 'SMN', '123', 'Green');
 
 -- --------------------------------------------------------
 
@@ -110,7 +110,8 @@ CREATE TABLE `faq` (
 
 INSERT INTO `faq` (`id`, `name`, `description`) VALUES
 (1, 'Covid 19 ', 'People with mild symptoms who are otherwise healthy should manage their symptoms at home. On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days'),
-(2, 'Heart Attack', 'The main heart attack treatments are thrombolytic or clot-busting drugs, aspirin, nitrates and beta blockers. Aspirin is now given to all patients who arrive at the hospital with a suspected heart attack because it helps thin the blood and reduce the size of the clot blocking one of the blood vessels in the heart.');
+(2, 'Heart Attack', 'The main heart attack treatments are thrombolytic or clot-busting drugs, aspirin, nitrates and beta blockers. Aspirin is now given to all patients who arrive at the hospital with a suspected heart attack because it helps thin the blood and reduce the size of the clot blocking one of the blood vessels in the heart.'),
+(6, 'Asthma', 'Asthma is a long-term inflammatory disease of the airways of the lungs. It is characterized by variable and recurring symptoms, reversible airflow obstruction, and easily triggered bronchospasms.');
 
 -- --------------------------------------------------------
 
@@ -134,8 +135,7 @@ INSERT INTO `medicine` (`id`, `name`, `short_description`, `price`) VALUES
 (3, 'Pregaba', 'Azithromycin is an antibiotic useful for the treatment of bacterial infections. It is an azalide, a subclass of macrolide antibiotic. ', 100),
 (4, 'Monas', 'Montelukast is a selective and orally active leukotriene receptor antagonist that inhibits the cysteinyl leukotriene receptor (CysLT1). The cysteinyl leukotrienes (LTC4, LTD4, LTE4) are products of ar', 50),
 (5, 'Fexo', 'Fexo 120 mg Tablet is an effective and potent anti-allergic medicine consists of Fexofenadine. It is used to treat allergic symptoms like runny nose, watery eyes, sneezing, itching, hives, etc., assoc', 80),
-(31, 'Torax 10', 'Tablet Torax Tablet ; Indications. Ketorolac Tromethamine is indicated for the short-term management of moderate to severe acute post-operative pain.', 10),
-(34, 'Osartil 25', 'Osartil 25mg Tab contains Losartan, a medicine that lowers increased blood pressure (Angiotensin-II receptor antagonists)', 90);
+(31, 'Torax 10', 'Tablet Torax Tablet ; Indications. Ketorolac Tromethamine is indicated for the short-term management of moderate to severe acute post-operative pain.', 100);
 
 -- --------------------------------------------------------
 
@@ -222,7 +222,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `booking`
@@ -234,13 +234,13 @@ ALTER TABLE `booking`
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `medicine`
