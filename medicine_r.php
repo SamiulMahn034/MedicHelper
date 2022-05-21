@@ -23,7 +23,7 @@ include ("header.php");
     </main>
     <center><H3 class="text-white mt-5" >Welcome To MedicHelper Medishop</H3></center>
      <center><H1 class="text-white mt-5" >We care, ALLAH Cure</H1></center>
-     <center><form style="display:flex;padding-left:600px;" method="get" action="search_medicine.php">
+     <center><form style="display:flex;padding-left:500px;" method="get" action="search_medicine.php">
   <div class="mb-3" style="width:800px;height:50px; ">
     <input type="text" class="form-control" name="name" placeholder="Search medicine by  name">
     
@@ -76,7 +76,7 @@ else{
     
 
 
-<div class="bg-success p-2 text-dark bg-opacity-10">Thanks for being with us</div>  
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <?php 

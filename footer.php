@@ -18,32 +18,33 @@
 <link rel="manifest" href="imeges/site.webmanifest">
 </head>
 <body>
-<footer style="background-color:antiquewhite; text-align: center;">
-        <h1> <span >MedicHelper</h1>
-        <p>Give us the chance to serve you</p>
-    </footer>
+<footer style=" " class="bg-dark p-2 text-dark bg-opacity-10">
+        <h1 style="text-align: center; color:#525966;">MedicHelper</h1>
+        <p style="text-align: center; color:#525966;">Give us the chance to serve you</p>
+    
     <section style="display: flex; justify-content: space-evenly;" class="container">
       <div>
-        <h2> Corparate Office </h2>
-        <p>Address: House: 134, Road: 12, Block: E, Banani, Dhaka - 1213</p>
-        <p>Hotline: (+880) 9666 787 787</p>
-        <p>Email: admin@medichelper.com</p>
+        <h3> For Doctor </h3>
+        <h5 ><a style="text-decoration:none; color:#525966;" href="logIg_doctor.php">Log In</a></h5>
+        <h5 ><a style="text-decoration:none; color:#525966;" href="signup_doctor.php">Sign In</a></h5>
         
       </div>
       
       <div>
-        <h2> CUSTOMER SERVICE </h2>
-        
-        <p>Payment Method</p>
-        <p>About Us</p>
+        <h3> For Patient </h3>
+        <h5 ><a style="text-decoration:none; color:#525966;" href="logIg_doctor.php">Find Doctor</a></h5>
+        <h5 ><a style="text-decoration:none; color:#525966;" href="doc_create.php">Find Medicine</a></h5>
+
+        <h5 ><a style="text-decoration:none; color:#525966;" href="logIg_patient.php">Log In</a></h5>
+        <h5 ><a style="text-decoration:none; color:#525966;" href="signup_patient.php">Sign Up</a></h5>
       </div>
       <div>
-        <h2> TERMS & POLICY 2020 </h2>
+        <h3> TERMS & POLICY 2020 </h3>
         <p>Terms & Condition Of Us<p>
         <p>Privacy Polic<p>
         
       </div>
-
+      </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">

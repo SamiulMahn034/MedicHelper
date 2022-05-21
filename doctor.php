@@ -55,7 +55,8 @@ include ("header.php");
                             <p class="card-text"><?php echo $rows ['category']?></p>
                             <p class="card-text"><?php echo $rows ['time']?></p>
                             <p class="card-text"><?php echo $rows ['day']?></p>
-                            <a href="#" class="btn btn-primary">Take an appoinment</a>
+                            
+                            <a href="create_appointment.php?doctor_name=<?php echo $rows ['doctor_name']?>&category=<?php echo $rows ['category']?>&time= <?php echo $rows ['time']?> &day=<?php echo $rows ['day']?> "><button class="btn btn-primary">Take an appoinment</button></a>
                             
                         </div>
                 </div>

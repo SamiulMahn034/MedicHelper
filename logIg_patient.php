@@ -14,7 +14,7 @@
        </div>
        <div style="padding-left:100px">
       <center><a class="navbar-brand text-white" href="index.php"><h1>MedicHelper</h1></a></center> 
-<form style="width:400px;" action="auth_admin.php" method="get">
+<form style="width:400px;" action="auth_patient.php" method="get">
   <div class="mb-3">
     <label for="name" class="form-label text-white">Username</label>
     <input type="text" class="form-control" name="user_name">
@@ -26,6 +26,7 @@
   </div>
   <div class="mb-3">
     <a style="color:white; text-decoration:none;" href="">Not Registered</a>
+    <a style="color:white; text-decoration:none;" href="pass_recovary_p.php">Forget password</a>
   </div>
   <button type="submit" class="btn btn-primary" style="width:400px;">LogIn</button>
 </form>

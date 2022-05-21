@@ -45,9 +45,7 @@ include ("header.php");
 <h4 class="text-white mt-5">Are you looking for:</h4>
 <div style="display:flex; flex-direction:row; justify-content: space-between;">
 <a href="doctor.php"><button type="button"  style="height:100px; width:200px;"class=" btn-lg btn btn-outline-success text-white fs-4">Doctor</button></a>
-<button type="button" style="height:100px; width:200px; " class="btn btn-outline-info btn-lg  text-white fs-4 ">Consult
-  
-</button>
+
 <a href="medicine_r.php"><button type="button" style="height:100px; width:200px;" class="btn btn-outline-danger btn-lg text-white fs-4"> Pharmecy</button></a>
 <button type="button" style="height:100px; width:200px;" class="btn btn-outline-warning btn-lg text-dark text-white fs-4"> Telemedicine</button>
 </div>
@@ -98,7 +96,7 @@ include ("header.php");
 <!-- FAQ Part -->
 <div class=" container mt-5" id="faq">
 <div style="width:50%;">
-  <img src="imeges/docc.jpg" alt="Here is a pic" style="height:300px; width:500px;">
+  <img src="imeges/Doc 1.png" alt="Here is a pic" style="height:100%; width:500px;">
   </div>
   <div class="accordion accordion-flush" id="accordionFlushExample" style="width:50%">
   
@@ -142,6 +140,7 @@ else{
 </div>
 </div>
 <br><br><br>
+
 <?php 
 include ("footer.php");
 ?>

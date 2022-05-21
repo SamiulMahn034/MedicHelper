@@ -14,9 +14,10 @@ $time = $_GET["time"];
 
 $day = $_GET["day"];
 
-$user_name = $_GET["username"];
+$username = $_GET["username"];
 
 $password = $_GET["password"];
+$authQues =  $_GET["authQues"];
 
 
 ?>
@@ -64,11 +65,15 @@ $password = $_GET["password"];
   </div>
   <div class="mb-3">
   <label for="price" class="form-label text-white">User Name</label>
-    <input type="text" class="form-control" name="user_name" value="<?php echo $user_name; ?>">
+    <input type="text" class="form-control" name="username" value="<?php echo $username; ?>">
   </div>
   <div class="mb-3">
   <label for="password" class="form-label text-white">Password</label>
     <input type="text" class="form-control" name="password" value="<?php echo $password; ?>">
+  </div>
+  <div class="mb-3">
+  <label for="authQues" class="form-label text-white">Password</label>
+    <input type="text" class="form-control" name="authQues" value="<?php echo $authQues; ?>">
   </div>
   
   <button type="submit" class="btn btn-primary" style="width:400px;">Update</button>

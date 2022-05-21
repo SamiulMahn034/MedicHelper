@@ -15,9 +15,10 @@ $time = $_GET["time"];
 
 $day = $_GET["day"];
 
-$user_name = $_GET["user_name"];
+$username = $_GET["username"];
 
 $password = $_GET["password"];
+$authQues =  $_GET["authQues"];
 
 
 
@@ -33,7 +34,7 @@ $password = $_GET["password"];
 
 
 
-	$query 	= "UPDATE doctor SET doctor_name='$doctor_name', doctor_number='$doctor_number',address='$address',category='$category',time='$time', day='$day',user_name='$user_name', password='$password' WHERE id = $id";
+	$query 	= "UPDATE doctor SET doctor_name='$doctor_name', doctor_number='$doctor_number',address='$address',category='$category',time='$time', day='$day',username='$username', password='$password', authQues='$authQues' WHERE id = $id";
 
 	echo $query;
 
