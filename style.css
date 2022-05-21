@@ -1,9 +1,10 @@
     body{   
         background-color:#AAAAAA;
-        background: url("imeges/bg1.png");
+        
         background-repeat: no-repeat;
         justify-content: center;
-        background-size: 100% 500px;
+        background-size: 100% 800px;
+        
         background-image: linear-gradient(#2E3192,  #1BFFFF);
     
         }

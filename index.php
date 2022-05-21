@@ -1,56 +1,33 @@
+<?php 
+include ("header.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
      <link rel="stylesheet" href="style.css">
       
      
-    </style>
+    
 
     <title>Dashboard-Medic Helper</title>
+<link rel="apple-touch-icon" sizes="180x180" href="imeges/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="imeges/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="imeges/favicon-16x16.png">
+<link rel="manifest" href="imeges/site.webmanifest">
 </head>
-<body style="--bs-bg-opacity: .5;" >
+<body>
     
     <main class="">
-        <Header class="bg-success bg-gradient text-dark bg-opacity-10">
-            <nav class="navbar navbar-expand-lg navbar-light mt-1 me-5 ms-5  ">
-                <div class="container-fluid ">
-                  <a class="navbar-brand text-white" href="index.php">MedicHelper</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active mx-3 text-white" aria-current="page" href="#">Home</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                        <a class="nav-link active mx-3 text-white" aria-current="page" href="doctor.php">Find Doctors</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active mx-3 text-white" aria-current="page" href="#">Find Medicals</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active mx-3 text-white" aria-current="page" href="#">About Us</a>
-                      </li>
-                     
-                    </ul>
-                    <form class="d-flex">
-                    <a href="log_in_choice.php"><button style="width:75px"  type="button" class="btn btn-outline-dark me-4 rounded-pill  ">Log In</button></a>
-                    
-                    <a href="sign_in_choice.php"><button style="width:100px" type="button" class="btn btn-primary bg-gradient rounded-pill  ">Sign In</button></a>
-                    </form>
-                  </div>
-                </div>
-              </nav>
-       
-        </Header>
+        
        
     </main>
+    
+
     
     <!-- Mid Button -->
 <div class="container">
@@ -76,7 +53,48 @@
 </div>
 
 </div>
-<br><br>
+<br>
+
+<!-- Carsoul -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imeges/Banner3.jpg" class="d-block w-100" style="height:500px;" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-dark">Get Our Best Doctor</h5>
+        <a href="doctor_read.php"><button type="button" class="btn btn-primary rounded-pill">Get An appointment</button></a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="imeges/Banner2.jpg" class="d-block w-100" style="height:500px;" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      <h5 class="text-dark">Get Authentic Medicine</h5>
+      <a href="doctor_read.php"><button type="button" class="btn btn-primary rounded-pill">Get Medicine Now</button></a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="imeges/Banner1.png" class="d-block w-100" style="height:500px;" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-dark">Try our Tememedicine Service</h5>
+        <a href="doctor_read.php"><button type="button" class="btn btn-primary rounded-pill">Get an Appointment Now</button></a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 <!-- FAQ Part -->
 <div class=" container mt-5" id="faq">
 <div style="width:50%;">
@@ -100,8 +118,8 @@
  
      <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-      <?php echo $rows ['name']?>
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" >
+        <?php echo $rows ['name']?>
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -124,45 +142,8 @@ else{
 </div>
 </div>
 <br><br><br>
-<footer style="background-color:antiquewhite; text-align: center;">
-        <h1> <span >MedicHelper</h1>
-        <p>Give us the chance to serve you</p>
-    </footer>
-    <section style="display: flex; justify-content: space-evenly;" class="container">
-      <div>
-        <h2> Corparate Office </h2>
-        <p>Address: House: 134, Road: 12, Block: E, Banani, Dhaka - 1213</p>
-        <p>Hotline: (+880) 9666 787 787</p>
-        <p>Email: admin@medichelper.com</p>
-        
-      </div>
-      
-      <div>
-        <h2> CUSTOMER SERVICE </h2>
-        
-        <p>Payment Method</p>
-        <p>About Us</p>
-      </div>
-      <div>
-        <h2> TERMS & POLICY 2020 </h2>
-        <p>Terms & Condition Of Us<p>
-        <p>Privacy Polic<p>
-        
-      </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/62824f027b967b11798f9478/1g36g98s5';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+<?php 
+include ("footer.php");
+?>
 </body>
 </html>
