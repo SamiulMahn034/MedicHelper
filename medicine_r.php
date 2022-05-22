@@ -54,7 +54,7 @@ include ("header.php");
                             <h5 class="card-title"><?php echo $rows ['name']?></h5>
                             <p class="card-text w-20px"><?php echo $rows ['short_description']?></p>
                             <p class="card-text"><?php echo $rows ['price']?> ৳</p>
-                            <a href="#" class="btn btn-primary">Buy Now</a>
+                            <a href="logIg_patient.php" class="btn btn-primary">Buy Now</a>
                             
                         </div>
                 </div>
