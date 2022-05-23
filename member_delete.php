@@ -12,7 +12,7 @@ $connect = mysqli_connect( HOST, USER, PASS, DB )
 
 
 
-mysqli_query( $connect, "DELETE FROM doctor WHERE id=$id" )
+mysqli_query( $connect, "DELETE FROM admin WHERE id=$id" )
     
 
 	or die("Can not execute query");
@@ -21,7 +21,7 @@ mysqli_query( $connect, "DELETE FROM doctor WHERE id=$id" )
 
 echo "Record deleted<br>";
 
-header('location: doctor_read.php');
+header('location: employee_read.php');
 
 
 

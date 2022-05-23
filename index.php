@@ -65,7 +65,7 @@ include ("header.php");
       <img src="imeges/Banner3.jpg" class="d-block w-100" style="height:500px;" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="text-dark">Get Our Best Doctor</h5>
-        <a href="doctor_read.php"><button type="button" class="btn btn-primary rounded-pill">Get An appointment</button></a>
+        <a href="logIg_patient.php"><button type="button" class="btn btn-primary rounded-pill">Get An appointment</button></a>
       </div>
     </div>
     <div class="carousel-item">
@@ -99,7 +99,7 @@ include ("header.php");
   <img src="imeges/Doc 1.png" alt="Here is a pic" style="height:100%; width:500px;">
   </div>
   <div class="accordion accordion-flush" id="accordionFlushExample" style="width:50%">
-  
+
 <?php
 	require_once('db_connect.php');
 	$connect = mysqli_connect( HOST, USER, PASS, DB )
@@ -112,7 +112,7 @@ include ("header.php");
         while( $rows = mysqli_fetch_array( $results ) ) 
         {
             ?>
- 
+  
  
      <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">

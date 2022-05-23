@@ -1,4 +1,6 @@
-
+<?php
+include('patient-dashboard.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,43 +17,7 @@
 </head>
 <body style="--bs-bg-opacity: .5;" >
     
-    <main class="">
-    <Header class="bg-success bg-gradient text-dark bg-opacity-10">
-            <nav class="navbar navbar-expand-lg navbar-light mt-1 me-5 ms-5   ">
-                <div class="container-fluid ">
-                  <a class="navbar-brand text-white" href="doctor-dashboard.php">MedicHelper</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active mx-3 text-white" aria-current="page" href="patient-dashboard.php">Home</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                        <a class="nav-link active mx-3 text-white" aria-current="page" href="doctor_aapointment.php">Find Doctor</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active mx-3 text-white" aria-current="page" href="medicine_doctor.php">Medicne</a>
-                      </li>
-                     
-                     
-                     
-                    </ul>
-                    <form class="d-flex">
-                    <a href="logIg_doctor.php"><button style="width:75px"  type="button" class="btn btn-outline-dark me-4 rounded-pill  ">LogOut</button></a>
-                    
-                    
-                    </form>
-                  </div>
-                </div>
-              </nav>
-       
-        </Header>
-       
-       
-    </main>
+   
     <center><H3 class="text-white mt-5" >Get our best doctor</H3></center>
      <center><H1 class="text-white mt-5" >We care, ALLAH Cure</H1></center>
      <center><form style="display:flex;padding-left:550px;" method="get" action="search_doctor.php">
@@ -87,7 +53,7 @@
                             <p class="card-text"><?php echo $rows ['time']?></p>
                             <p class="card-text"><?php echo $rows ['day']?></p>
                             
-                            <a href="create_appointment.php?doctor_name=<?php echo $rows ['doctor_name']?>&category=<?php echo $rows ['category']?>&time= <?php echo $rows ['time']?> &day=<?php echo $rows ['day']?> "><button class="btn btn-primary">Take an appoinment</button></a>
+                            <a href="create_appointment.php?id=<?php echo $rows['id']?>&doctor_name=<?php echo $rows ['doctor_name']?>&category=<?php echo $rows ['category']?>&time= <?php echo $rows ['time']?> &day=<?php echo $rows ['day']?> "><button class="btn btn-primary">Take an appoinment</button></a>
                             
                         </div>
                 </div>
@@ -112,8 +78,6 @@ else{
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<?php 
-include ("footer.php");
-?>
+
 </body>
 </html>

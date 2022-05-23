@@ -1,5 +1,5 @@
-<?php 
-include ('admin-dashboard_header.php');
+<?php
+include('patient-dashboard.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,22 +12,20 @@ include ('admin-dashboard_header.php');
     <title>Document</title>
 </head>
 <body style="height:1000px; background-image: linear-gradient(#93A5CF,   #E4EfE9);">
+<Header class="bg-success bg-gradient text-dark bg-opacity-10">
 
     
     <!-- Mid Button -->
 
 <div class="container">
-<h4 class="text-white mt-5">Employee List:</h4>
+<h4 class="text-white mt-5">Medicine List:</h4>
 <table class="table">
   <thead>
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Name</th>
-      <th scope="col">Contact Number</th>
-      <th scope="col">Address</th>
-      <th scope="col">Job Title</th>
-      <th scope="col">User Name</th>
-      <th scope="col">Password</th>
+      <th scope="col">Short_description</th>
+      <th scope="col">Price</th>
     </tr>
   </thead>
 <?php
@@ -36,7 +34,7 @@ include ('admin-dashboard_header.php');
 		or die("Can not connect");
 
 
-	$results = mysqli_query( $connect, "SELECT * FROM admin" );
+	$results = mysqli_query( $connect, "SELECT * FROM medicine" );
     $check_result= mysqli_num_rows($results)> 0;
     if($check_result){
         while( $rows = mysqli_fetch_array( $results ) ) 
@@ -47,15 +45,11 @@ include ('admin-dashboard_header.php');
     <tr>
       
       <td><?php echo $rows ['id']?></td>
-      <td><?php echo $rows ['employee_name']?></td>
-      <td><?php echo $rows ['contact_number']?></td>
-      <td><?php echo $rows ['address']?></td>
-      <td><?php echo $rows ['job_title']?></td>
-      <td><?php echo $rows ['user_name']?></td>
-      <td><?php echo $rows ['password']?></td>
-      <td><a href ="member_delete.php?id=<?php echo $rows ['id']?>"><button class="btn btn-danger"> Delete</button></a></td>
-      <td><a href="member_update.php?id=<?php echo $rows ['id']?> &name=<?php echo $rows ['employee_name']?>&contact_number=<?php echo $rows ['contact_number']?>&address=<?php echo $rows ['address']?> &job_title=<?php echo $rows ['job_title']?> &user_name=<?php echo $rows ['user_name']?> &password=<?php echo $rows ['password']?>"><button class="btn btn-success">Update</button></a></td>
-
+      <td><?php echo $rows ['name']?></td>
+      <td><?php echo $rows ['short_description']?></td>
+      <td><?php echo $rows ['price']?> ৳</td>
+      <td><a href =""><button class="btn btn-danger"> Purchase</button></a></td>
+      
     </tr>
    
     

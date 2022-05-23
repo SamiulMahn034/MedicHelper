@@ -13,18 +13,14 @@ $connect = mysqli_connect( HOST, USER, PASS, DB )
 
 
 
-mysqli_query( $connect, "SELECT * FROM admin WHERE user_name like '$user_name' AND password like '$password'" )
-    
-
-	or die("Can not execute query");
-
-
-
-echo "Record deleted<br>";
-
-header('location: admin-dashboard.php');
-
-
-
+	$results=mysqli_query( $connect, "SELECT * FROM admin WHERE user_name = '$user_name' AND password = '$password'" );
+	$check_result= mysqli_num_rows($results)> 0;
+	if($check_result){
+	  header('location: admin-dashboard.php');
+	  
+	  }
+  else {
+	  header('location: logIg_admin.php');
+  }
 
 ?>
