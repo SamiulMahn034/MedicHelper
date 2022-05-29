@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.7.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 29, 2022 at 06:29 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.15
+-- Host: sql4.freesqldatabase.com
+-- Generation Time: May 29, 2022 at 06:39 AM
+-- Server version: 5.5.54-0ubuntu0.12.04.1
+-- PHP Version: 7.0.33-0ubuntu0.16.04.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `medichelper`
+-- Database: `sql4496064`
 --
 
 -- --------------------------------------------------------
@@ -46,7 +47,9 @@ INSERT INTO `admin` (`id`, `employee_name`, `contact_number`, `address`, `job_ti
 (2, 'Naba', '01686963558', 'Dhaka', 'Admin', 'mhfz', '1234'),
 (3, 'Shuvo', '01686963558', 'Dhanmondi', 'Manager', 'Shv', '1234'),
 (4, 'Dihan', '01304555701', 'Dhaka', 'Senior Executive', 'Dhn', '1234'),
-(5, 'Shakawat', '01304555701', 'Natunbazar', 'Senior  Executive', 'Shk', '1234');
+(5, 'Shakawat', '01304555701', 'Natunbazar', 'Senior  Executive', 'Shk', '1234'),
+(36, 'Mr x', '01304555701', '84/c', 'yz', 'adada', '1234'),
+(37, '', '', 'Coatchandpur', '', 'mhn', '1234');
 
 -- --------------------------------------------------------
 
@@ -100,7 +103,8 @@ INSERT INTO `doctor` (`id`, `doctor_name`, `doctor_number`, `address`, `category
 (3, 'Rafiur Rashid', '01304555701', 'Niketon', 'Eye', '8:00pm - 10;00 pm', 'Sun,Mon,Tue', 'rfr', '1234', 'blue'),
 (4, 'Salman Shamil', '01686963558', 'Rayerbag', 'Ear', '8:00pm - 10;00 pm', 'SUm,Mon,Tue', 'SHL', '1234', 'Red'),
 (5, 'A.K.M Muzahid Islam', '01686963558', 'Mirpur', 'heart', '  8:00pm - 10;00 pm  ', 'Sat, Wed, Tue  ', 'MZHD  ', '1234  ', 'Green'),
-(6, 'Suman Ahmed', '01304555701', 'Rayerbag', 'Heart', '8:00pm - 10;00 pm', 'Sat, Wed, Tue', 'SMN', '123', 'Green');
+(6, 'Suman Ahmed', '01304555701', 'Rayerbag', 'Heart', '8:00pm - 10;00 pm', 'Sat, Wed, Tue', 'SMN', '123', 'Green'),
+(8, '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -182,7 +186,8 @@ CREATE TABLE `patient_info` (
 --
 
 INSERT INTO `patient_info` (`id`, `patient_name`, `patient_number`, `address`, `age`, `blood_group`, `user_name`, `password`) VALUES
-(1, '1111', '11111', '111111', 1, '11111', '1234', '1234');
+(1, '1111', '11111', '111111', 1, '11111', '1234', '1234'),
+(2, 'Samiul Mahin', '01304555701', 'Coatchandpur', 23, 'B+', 'mhn', '1234');
 
 -- --------------------------------------------------------
 
@@ -197,6 +202,32 @@ CREATE TABLE `payment` (
   `amount` int(4) NOT NULL,
   `payment_status` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prescription`
+--
+
+CREATE TABLE `prescription` (
+  `id` int(100) NOT NULL,
+  `doctor_id` int(100) NOT NULL,
+  `doctor_name` varchar(100) NOT NULL,
+  `patient_id` int(100) NOT NULL,
+  `patient_name` varchar(100) NOT NULL,
+  `time` varchar(100) NOT NULL,
+  `date` date NOT NULL,
+  `medication` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `prescription`
+--
+
+INSERT INTO `prescription` (`id`, `doctor_id`, `doctor_name`, `patient_id`, `patient_name`, `time`, `date`, `medication`) VALUES
+(3, 3, '', 2, 'Naba', ' 8:00pm - 10;00 pm ', '2022-05-24', 'napa'),
+(2, 3, '', 1, 'Mahin', ' 8:00pm - 10;00 pm ', '2022-05-24', 'napa'),
+(3, 3, 'Rafiur Rashid', 2, 'Naba', ' 8:00pm - 10;00 pm ', '2022-05-24', 'napa.peracitamol');
 
 --
 -- Indexes for dumped tables
@@ -258,50 +289,42 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
-
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `appoinment`
 --
 ALTER TABLE `appoinment`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `login_log`
 --
 ALTER TABLE `login_log`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `medicine`
 --
 ALTER TABLE `medicine`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
-
 --
 -- AUTO_INCREMENT for table `patient_info`
 --
 ALTER TABLE `patient_info`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT;
-COMMIT;
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

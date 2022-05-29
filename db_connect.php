@@ -1,8 +1,8 @@
 <?php
 
 	// Defining Constants
-	define( 'HOST', 'sql4.freesqldatabase.com' );
-	define( 'DB', 'sql4496064' );
-	define( 'USER', 'sql4496064' );
-	define( 'PASS', 'WQ8UrkLUew' );
+	define( 'HOST', 'bnaxxxjqisxjkxsgg8vf-mysql.services.clever-cloud.com' );
+	define( 'DB', 'bnaxxxjqisxjkxsgg8vf' );
+	define( 'USER', 'ublnwwq2vwkqfgfc' );
+	define( 'PASS', 'JBo5Oen1XaUlvTUtAugT' );
 ?>
