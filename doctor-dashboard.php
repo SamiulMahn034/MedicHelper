@@ -27,7 +27,7 @@
                       </li>
                      
                       <li class="nav-item">
-                        <a class="nav-link active mx-3 text-white" aria-current="page" href="appointment_read.php">Appointment List</a>
+                        <a class="nav-link active mx-3 text-white" aria-current="page" href="appointment_read_d.php">Appointment List</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link active mx-3 text-white" aria-current="page" href="medicine_doctor.php">Medicne</a>

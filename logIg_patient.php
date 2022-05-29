@@ -29,7 +29,7 @@
     <input type="password" class="form-control" name="password">
   </div>
   <div class="mb-3">
-    <a style="color:white; text-decoration:none;" href="">Not Registered</a>
+    <a style="color:white; text-decoration:none;" href="signup_patient.php">Not Registered</a>
     <a style="color:white; text-decoration:none;" href="pass_recovary_p.php">Forget password</a>
   </div>
   <button type="submit" class="btn btn-primary" style="width:400px;">LogIn</button>

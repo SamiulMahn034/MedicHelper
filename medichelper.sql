@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2022 at 04:47 AM
+-- Generation Time: May 29, 2022 at 06:29 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -72,20 +72,6 @@ INSERT INTO `appoinment` (`id`, `doctor_id`, `doctor_name`, `patient_id`, `patie
 (1, 1, 'Rafiur Rashid', 1, 'Mahin', '8:00pm - 10;00 pm', '2022-05-22'),
 (2, 3, 'Rafiur Rashid', 1, 'Mahin', ' 8:00pm - 10;00 pm ', '2022-05-24'),
 (3, 3, 'Rafiur Rashid', 2, 'Naba', ' 8:00pm - 10;00 pm ', '2022-05-24');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `booking`
---
-
-CREATE TABLE `booking` (
-  `booking_id` int(10) NOT NULL,
-  `patient_id` int(5) NOT NULL,
-  `booking_date` date NOT NULL DEFAULT current_timestamp(),
-  `doctor_id` int(4) NOT NULL,
-  `doctor_cat` int(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -229,12 +215,6 @@ ALTER TABLE `appoinment`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `booking`
---
-ALTER TABLE `booking`
-  ADD PRIMARY KEY (`booking_id`);
-
---
 -- Indexes for table `doctor`
 --
 ALTER TABLE `doctor`
@@ -285,12 +265,6 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `appoinment`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `booking`
---
-ALTER TABLE `booking`
-  MODIFY `booking_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `doctor`
